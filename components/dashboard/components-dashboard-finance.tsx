@@ -412,7 +412,7 @@ const ComponentsDashboardFinance = () => {
                             <div className="text-3xl font-bold ltr:mr-3 rtl:ml-3"> 170 </div>
                         </div>
                         <div className="mt-5 flex items-center font-semibold">
-                            <Link href="/employees" className="btn btn-primary"><IconEye className="shrink-0 ltr:mr-2 rtl:ml-2" /> View Employees List</Link>
+                            <Link href="/employees" className="btn btn-primary"><IconEye className="shrink-0 ltr:mr-2 rtl:ml-2" /> View List</Link>
                         </div>
                     </div>
 
@@ -424,7 +424,7 @@ const ComponentsDashboardFinance = () => {
                             <div className="text-3xl font-bold ltr:mr-3 rtl:ml-3"> 50 </div>
                         </div>
                         <div className="mt-5 flex items-center font-semibold">
-                            <Link href="/organizations/departments" className="btn btn-primary"><IconEye className="shrink-0 ltr:mr-2 rtl:ml-2" /> View Employees List</Link>
+                            <Link href="/organizations/departments" className="btn btn-primary"><IconEye className="shrink-0 ltr:mr-2 rtl:ml-2" /> View List</Link>
                         </div>
                     </div>
                     
@@ -436,7 +436,7 @@ const ComponentsDashboardFinance = () => {
                             <div className="text-3xl font-bold ltr:mr-3 rtl:ml-3"> 50 </div>
                         </div>
                         <div className="mt-5 flex items-center font-semibold">
-                            <Link href="/organizations/departments" className="btn btn-primary"><IconEye className="shrink-0 ltr:mr-2 rtl:ml-2" /> View Employees List</Link>
+                            <Link href="/organizations/departments" className="btn btn-primary"><IconEye className="shrink-0 ltr:mr-2 rtl:ml-2" /> View List</Link>
                         </div>
                     </div>
                     
@@ -448,7 +448,7 @@ const ComponentsDashboardFinance = () => {
                             <div className="text-3xl font-bold ltr:mr-3 rtl:ml-3"> 50 </div>
                         </div>
                         <div className="mt-5 flex items-center font-semibold">
-                            <Link href="/organizations/job-types" className="btn btn-primary"><IconEye className="shrink-0 ltr:mr-2 rtl:ml-2" /> View Employees List</Link>
+                            <Link href="/organizations/job-types" className="btn btn-primary"><IconEye className="shrink-0 ltr:mr-2 rtl:ml-2" /> View List</Link>
                         </div>
                     </div>
 
@@ -461,7 +461,7 @@ const ComponentsDashboardFinance = () => {
                             <div className="text-3xl font-bold ltr:mr-3 rtl:ml-3"> 50 </div>
                         </div>
                         <div className="mt-5 flex items-center font-semibold">
-                            <Link href="/banks" className="btn btn-primary"><IconEye className="shrink-0 ltr:mr-2 rtl:ml-2" /> View Employees List</Link>
+                            <Link href="/banks" className="btn btn-primary"><IconEye className="shrink-0 ltr:mr-2 rtl:ml-2" /> View List</Link>
                         </div>
                     </div>
                     
@@ -473,7 +473,7 @@ const ComponentsDashboardFinance = () => {
                             <div className="text-3xl font-bold ltr:mr-3 rtl:ml-3"> 50 </div>
                         </div>
                         <div className="mt-5 flex items-center font-semibold">
-                            <Link href="/locations" className="btn btn-primary"><IconEye className="shrink-0 ltr:mr-2 rtl:ml-2" /> View Employees List</Link>
+                            <Link href="/locations" className="btn btn-primary"><IconEye className="shrink-0 ltr:mr-2 rtl:ml-2" /> View List</Link>
                         </div>
                     </div>
 
@@ -485,7 +485,7 @@ const ComponentsDashboardFinance = () => {
                             <div className="text-3xl font-bold ltr:mr-3 rtl:ml-3"> 50 </div>
                         </div>
                         <div className="mt-5 flex items-center font-semibold">
-                            <Link href="/allownaces/allownace-types" className="btn btn-primary"><IconEye className="shrink-0 ltr:mr-2 rtl:ml-2" /> View Employees List</Link>
+                            <Link href="/allownaces/allownace-types" className="btn btn-primary"><IconEye className="shrink-0 ltr:mr-2 rtl:ml-2" /> View List</Link>
                         </div>
                     </div>
                     
@@ -497,7 +497,7 @@ const ComponentsDashboardFinance = () => {
                             <div className="text-3xl font-bold ltr:mr-3 rtl:ml-3"> 170 </div>
                         </div>
                         <div className="mt-5 flex items-center font-semibold">
-                            <Link href="/users" className="btn btn-primary"><IconEye className="shrink-0 ltr:mr-2 rtl:ml-2" /> View Employees List</Link>
+                            <Link href="/users" className="btn btn-primary"><IconEye className="shrink-0 ltr:mr-2 rtl:ml-2" /> View List</Link>
                         </div>
                     </div>
                 </div>

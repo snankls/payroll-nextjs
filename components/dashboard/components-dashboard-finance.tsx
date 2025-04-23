@@ -406,252 +406,102 @@ const ComponentsDashboardFinance = () => {
                 <div className="mb-6 grid grid-cols-1 gap-6 text-white sm:grid-cols-2 xl:grid-cols-4">
                     <div className="panel bg-gradient-to-r from-cyan-500 to-cyan-400">
                         <div className="flex justify-between">
-                            <div className="text-md font-semibold ltr:mr-1 rtl:ml-1">Users Visit</div>
-                            <div className="dropdown">
-                                <Dropdown
-                                    offset={[0, 5]}
-                                    placement={`${isRtl ? 'bottom-start' : 'bottom-end'}`}
-                                    btnClassName="hover:opacity-80"
-                                    button={<IconHorizontalDots className="opacity-70 hover:opacity-80" />}
-                                >
-                                    <ul className="text-black dark:text-white-dark">
-                                        <li>
-                                            <button type="button">View Report</button>
-                                        </li>
-                                        <li>
-                                            <button type="button">Edit Report</button>
-                                        </li>
-                                    </ul>
-                                </Dropdown>
-                            </div>
+                            <div className="text-md font-semibold ltr:mr-1 rtl:ml-1">Total Employees</div>
                         </div>
                         <div className="mt-5 flex items-center">
-                            <div className="text-3xl font-bold ltr:mr-3 rtl:ml-3"> $170.46 </div>
-                            <div className="badge bg-white/30">+ 2.35% </div>
+                            <div className="text-3xl font-bold ltr:mr-3 rtl:ml-3"> 170 </div>
                         </div>
                         <div className="mt-5 flex items-center font-semibold">
-                            <IconEye className="shrink-0 ltr:mr-2 rtl:ml-2" />
-                            Last Week 44,700
+                            <Link href="/employees" className="btn btn-primary"><IconEye className="shrink-0 ltr:mr-2 rtl:ml-2" /> View Employees List</Link>
                         </div>
                     </div>
 
-                    {/* Sessions */}
                     <div className="panel bg-gradient-to-r from-violet-500 to-violet-400">
                         <div className="flex justify-between">
-                            <div className="text-md font-semibold ltr:mr-1 rtl:ml-1">Sessions</div>
-                            <div className="dropdown">
-                                <Dropdown
-                                    offset={[0, 5]}
-                                    placement={`${isRtl ? 'bottom-start' : 'bottom-end'}`}
-                                    btnClassName="hover:opacity-80"
-                                    button={<IconHorizontalDots className="opacity-70 hover:opacity-80" />}
-                                >
-                                    <ul className="text-black dark:text-white-dark">
-                                        <li>
-                                            <button type="button">View Report</button>
-                                        </li>
-                                        <li>
-                                            <button type="button">Edit Report</button>
-                                        </li>
-                                    </ul>
-                                </Dropdown>
-                            </div>
+                            <div className="text-md font-semibold ltr:mr-1 rtl:ml-1">Total Departments</div>
                         </div>
                         <div className="mt-5 flex items-center">
-                            <div className="text-3xl font-bold ltr:mr-3 rtl:ml-3"> 74,137 </div>
-                            <div className="badge bg-white/30">- 2.35% </div>
+                            <div className="text-3xl font-bold ltr:mr-3 rtl:ml-3"> 50 </div>
                         </div>
                         <div className="mt-5 flex items-center font-semibold">
-                            <IconEye className="shrink-0 ltr:mr-2 rtl:ml-2" />
-                            Last Week 84,709
+                            <Link href="/organizations/departments" className="btn btn-primary"><IconEye className="shrink-0 ltr:mr-2 rtl:ml-2" /> View Employees List</Link>
                         </div>
                     </div>
-
-                    {/*  Time On-Site */}
+                    
                     <div className="panel bg-gradient-to-r from-blue-500 to-blue-400">
                         <div className="flex justify-between">
-                            <div className="text-md font-semibold ltr:mr-1 rtl:ml-1">Time On-Site</div>
-                            <div className="dropdown">
-                                <Dropdown
-                                    offset={[0, 5]}
-                                    placement={`${isRtl ? 'bottom-start' : 'bottom-end'}`}
-                                    btnClassName="hover:opacity-80"
-                                    button={<IconHorizontalDots className="opacity-70 hover:opacity-80" />}
-                                >
-                                    <ul className="text-black dark:text-white-dark">
-                                        <li>
-                                            <button type="button">View Report</button>
-                                        </li>
-                                        <li>
-                                            <button type="button">Edit Report</button>
-                                        </li>
-                                    </ul>
-                                </Dropdown>
-                            </div>
+                            <div className="text-md font-semibold ltr:mr-1 rtl:ml-1">Total Job Designation</div>
                         </div>
                         <div className="mt-5 flex items-center">
-                            <div className="text-3xl font-bold ltr:mr-3 rtl:ml-3"> 38,085 </div>
-                            <div className="badge bg-white/30">+ 1.35% </div>
+                            <div className="text-3xl font-bold ltr:mr-3 rtl:ml-3"> 50 </div>
                         </div>
                         <div className="mt-5 flex items-center font-semibold">
-                            <IconEye className="shrink-0 ltr:mr-2 rtl:ml-2" />
-                            Last Week 37,894
+                            <Link href="/organizations/departments" className="btn btn-primary"><IconEye className="shrink-0 ltr:mr-2 rtl:ml-2" /> View Employees List</Link>
                         </div>
                     </div>
-
-                    {/* Bounce Rate */}
+                    
                     <div className="panel bg-gradient-to-r from-fuchsia-500 to-fuchsia-400">
                         <div className="flex justify-between">
-                            <div className="text-md font-semibold ltr:mr-1 rtl:ml-1">Bounce Rate</div>
-                            <div className="dropdown">
-                                <Dropdown
-                                    offset={[0, 5]}
-                                    placement={`${isRtl ? 'bottom-start' : 'bottom-end'}`}
-                                    btnClassName="hover:opacity-80"
-                                    button={<IconHorizontalDots className="opacity-70 hover:opacity-80" />}
-                                >
-                                    <ul className="text-black dark:text-white-dark">
-                                        <li>
-                                            <button type="button">View Report</button>
-                                        </li>
-                                        <li>
-                                            <button type="button">Edit Report</button>
-                                        </li>
-                                    </ul>
-                                </Dropdown>
-                            </div>
+                            <div className="text-md font-semibold ltr:mr-1 rtl:ml-1">Total Job Types</div>
                         </div>
                         <div className="mt-5 flex items-center">
-                            <div className="text-3xl font-bold ltr:mr-3 rtl:ml-3"> 49.10% </div>
-                            <div className="badge bg-white/30">- 0.35% </div>
+                            <div className="text-3xl font-bold ltr:mr-3 rtl:ml-3"> 50 </div>
                         </div>
                         <div className="mt-5 flex items-center font-semibold">
-                            <IconEye className="shrink-0 ltr:mr-2 rtl:ml-2" />
-                            Last Week 50.01%
+                            <Link href="/organizations/job-types" className="btn btn-primary"><IconEye className="shrink-0 ltr:mr-2 rtl:ml-2" /> View Employees List</Link>
+                        </div>
+                    </div>
+
+                    
+                    <div className="panel bg-gradient-to-r from-fuchsia-500 to-fuchsia-400">
+                        <div className="flex justify-between">
+                            <div className="text-md font-semibold ltr:mr-1 rtl:ml-1">Total Bank A/C</div>
+                        </div>
+                        <div className="mt-5 flex items-center">
+                            <div className="text-3xl font-bold ltr:mr-3 rtl:ml-3"> 50 </div>
+                        </div>
+                        <div className="mt-5 flex items-center font-semibold">
+                            <Link href="/banks" className="btn btn-primary"><IconEye className="shrink-0 ltr:mr-2 rtl:ml-2" /> View Employees List</Link>
+                        </div>
+                    </div>
+                    
+                    <div className="panel bg-gradient-to-r from-blue-500 to-blue-400">
+                        <div className="flex justify-between">
+                            <div className="text-md font-semibold ltr:mr-1 rtl:ml-1">Total Locations</div>
+                        </div>
+                        <div className="mt-5 flex items-center">
+                            <div className="text-3xl font-bold ltr:mr-3 rtl:ml-3"> 50 </div>
+                        </div>
+                        <div className="mt-5 flex items-center font-semibold">
+                            <Link href="/locations" className="btn btn-primary"><IconEye className="shrink-0 ltr:mr-2 rtl:ml-2" /> View Employees List</Link>
+                        </div>
+                    </div>
+
+                    <div className="panel bg-gradient-to-r from-violet-500 to-violet-400">
+                        <div className="flex justify-between">
+                            <div className="text-md font-semibold ltr:mr-1 rtl:ml-1">Total Allowance Types</div>
+                        </div>
+                        <div className="mt-5 flex items-center">
+                            <div className="text-3xl font-bold ltr:mr-3 rtl:ml-3"> 50 </div>
+                        </div>
+                        <div className="mt-5 flex items-center font-semibold">
+                            <Link href="/allownaces/allownace-types" className="btn btn-primary"><IconEye className="shrink-0 ltr:mr-2 rtl:ml-2" /> View Employees List</Link>
+                        </div>
+                    </div>
+                    
+                    <div className="panel bg-gradient-to-r from-cyan-500 to-cyan-400">
+                        <div className="flex justify-between">
+                            <div className="text-md font-semibold ltr:mr-1 rtl:ml-1">Total Users</div>
+                        </div>
+                        <div className="mt-5 flex items-center">
+                            <div className="text-3xl font-bold ltr:mr-3 rtl:ml-3"> 170 </div>
+                        </div>
+                        <div className="mt-5 flex items-center font-semibold">
+                            <Link href="/users" className="btn btn-primary"><IconEye className="shrink-0 ltr:mr-2 rtl:ml-2" /> View Employees List</Link>
                         </div>
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 gap-6 xl:grid-cols-2">
-                    {/*  Favorites  */}
-                    <div>
-                        <div className="mb-5 flex items-center font-bold">
-                            <span className="text-lg">Favorites</span>
-                            <button type="button" className="text-primary hover:text-black ltr:ml-auto rtl:mr-auto dark:hover:text-white-dark">
-                                See All
-                            </button>
-                        </div>
-                        <div className="grid grid-cols-1 gap-6 sm:grid-cols-3 md:mb-5">
-                            {/*  Bitcoin  */}
-                            <div className="panel">
-                                <div className="mb-5 flex items-center font-semibold">
-                                    <div className="grid h-10 w-10 shrink-0 place-content-center rounded-full">
-                                        <IconBitcoin />
-                                    </div>
-                                    <div className="ltr:ml-2 rtl:mr-2">
-                                        <h6 className="text-dark dark:text-white-light">BTC</h6>
-                                        <p className="text-xs text-white-dark">Bitcoin</p>
-                                    </div>
-                                </div>
-                                <div className="mb-5">{isMounted && <ReactApexChart series={bitcoin.series} options={bitcoin.options} type="line" height={45} width={'100%'} />}</div>
-                                <div className="flex items-center justify-between text-base font-bold">
-                                    $20,000 <span className="text-sm font-normal text-success">+0.25%</span>
-                                </div>
-                            </div>
-                            {/*  Ethereum*/}
-                            <div className="panel">
-                                <div className="mb-5 flex items-center font-semibold">
-                                    <div className="grid h-10 w-10 shrink-0 place-content-center rounded-full bg-warning p-2">
-                                        <IconEthereum />
-                                    </div>
-                                    <div className="ltr:ml-2 rtl:mr-2">
-                                        <h6 className="text-dark dark:text-white-light">ETH</h6>
-                                        <p className="text-xs text-white-dark">Ethereum</p>
-                                    </div>
-                                </div>
-                                <div className="mb-5">{isMounted && <ReactApexChart series={ethereum.series} options={ethereum.options} type="line" height={45} width={'100%'} />}</div>
-                                <div className="flex items-center justify-between text-base font-bold">
-                                    $21,000 <span className="text-sm font-normal text-danger">-1.25%</span>
-                                </div>
-                            </div>
-                            {/*  Litecoin*/}
-                            <div className="panel">
-                                <div className="mb-5 flex items-center font-semibold">
-                                    <div className="grid h-10 w-10 shrink-0 place-content-center rounded-full">
-                                        <IconLitecoin />
-                                    </div>
-                                    <div className="ltr:ml-2 rtl:mr-2">
-                                        <h6 className="text-dark dark:text-white-light">LTC</h6>
-                                        <p className="text-xs text-white-dark">Litecoin</p>
-                                    </div>
-                                </div>
-                                <div className="mb-5">{isMounted && <ReactApexChart series={litecoin.series} options={litecoin.options} type="line" height={45} width={'100%'} />}</div>
-                                <div className="flex items-center justify-between text-base font-bold">
-                                    $11,657 <span className="text-sm font-normal text-success">+0.25%</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    {/*  Prices  */}
-                    <div>
-                        <div className="mb-5 flex items-center font-bold">
-                            <span className="text-lg">Live Prices</span>
-                            <button type="button" className="text-primary hover:text-black ltr:ml-auto rtl:mr-auto dark:hover:text-white-dark">
-                                See All
-                            </button>
-                        </div>
-                        <div className="mb-6 grid grid-cols-1 gap-6 sm:grid-cols-3">
-                            {/*  Binance */}
-                            <div className="panel">
-                                <div className="mb-5 flex items-center font-semibold">
-                                    <div className="grid h-10 w-10 shrink-0 place-content-center rounded-full">
-                                        <IconBinance />
-                                    </div>
-                                    <div className="ltr:ml-2 rtl:mr-2">
-                                        <h6 className="text-dark dark:text-white-light">BNB</h6>
-                                        <p className="text-xs text-white-dark">Binance</p>
-                                    </div>
-                                </div>
-                                <div className="mb-5">{isMounted && <ReactApexChart series={binance.series} options={binance.options} type="line" height={45} width={'100%'} />}</div>
-                                <div className="flex items-center justify-between text-base font-bold">
-                                    $21,000 <span className="text-sm font-normal text-danger">-1.25%</span>
-                                </div>
-                            </div>
-                            {/*  Tether  */}
-                            <div className="panel">
-                                <div className="mb-5 flex items-center font-semibold">
-                                    <div className="grid h-10 w-10 shrink-0 place-content-center rounded-full">
-                                        <IconTether />
-                                    </div>
-                                    <div className="ltr:ml-2 rtl:mr-2">
-                                        <h6 className="text-dark dark:text-white-light">USDT</h6>
-                                        <p className="text-xs text-white-dark">Tether</p>
-                                    </div>
-                                </div>
-                                <div className="mb-5">{isMounted && <ReactApexChart series={tether.series} options={tether.options} type="line" height={45} width={'100%'} />}</div>
-                                <div className="flex items-center justify-between text-base font-bold">
-                                    $20,000 <span className="text-sm font-normal text-success">+0.25%</span>
-                                </div>
-                            </div>
-                            {/*  Solana */}
-                            <div className="panel">
-                                <div className="mb-5 flex items-center font-semibold">
-                                    <div className="grid h-10 w-10 shrink-0 place-content-center rounded-full bg-warning p-2">
-                                        <IconSolana />
-                                    </div>
-                                    <div className="ltr:ml-2 rtl:mr-2">
-                                        <h6 className="text-dark dark:text-white-light">SOL</h6>
-                                        <p className="text-xs text-white-dark">Solana</p>
-                                    </div>
-                                </div>
-                                <div className="mb-5">{isMounted && <ReactApexChart series={solana.series} options={solana.options} type="line" height={45} width={'100%'} />}</div>
-                                <div className="flex items-center justify-between text-base font-bold">
-                                    $21,000 <span className="text-sm font-normal text-danger">-1.25%</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <div className="grid grid-cols-1 gap-6 xl:grid-cols-2">
                     <div className="grid gap-6 xl:grid-flow-row">
                         {/*  Previous Statement  */}

@@ -728,7 +728,7 @@ const Sidebar = () => {
                                 <AnimateHeight duration={300} height={currentMenu === 'employee' ? 'auto' : 0}>
                                     <ul className="sub-menu text-gray-500">
                                         <li>
-                                            <Link href="/employees/list">Employee</Link>
+                                            <Link href="/employees">Employee</Link>
                                         </li>
                                         <li>
                                             <Link href="/employees/setup">Add New</Link>
@@ -779,7 +779,7 @@ const Sidebar = () => {
                                 <AnimateHeight duration={300} height={currentMenu === 'attendance' ? 'auto' : 0}>
                                     <ul className="sub-menu text-gray-500">
                                         <li>
-                                            <Link href="/attendances/list">Attendance</Link>
+                                            <Link href="/attendances">Attendance</Link>
                                         </li>
                                         <li>
                                             <Link href="/attendances/setup">Add New</Link>
@@ -803,7 +803,7 @@ const Sidebar = () => {
                                 <AnimateHeight duration={300} height={currentMenu === 'allownace' ? 'auto' : 0}>
                                     <ul className="sub-menu text-gray-500">
                                         <li>
-                                            <Link href="/allownaces/list">Allownaces</Link>
+                                            <Link href="/allownaces">Allownaces</Link>
                                         </li>
                                         <li>
                                             <Link href="/allownaces/setup">Add New</Link>
@@ -830,7 +830,7 @@ const Sidebar = () => {
                                 <AnimateHeight duration={300} height={currentMenu === 'loan' ? 'auto' : 0}>
                                     <ul className="sub-menu text-gray-500">
                                         <li>
-                                            <Link href="/loans/list">Loans</Link>
+                                            <Link href="/loans">Loans</Link>
                                         </li>
                                         <li>
                                             <Link href="/loans/setup">Add New</Link>
@@ -854,7 +854,7 @@ const Sidebar = () => {
                                 <AnimateHeight duration={300} height={currentMenu === 'leave' ? 'auto' : 0}>
                                     <ul className="sub-menu text-gray-500">
                                         <li>
-                                            <Link href="/leave-applications/list">Leave Applications</Link>
+                                            <Link href="/leave-applications">Leave Applications</Link>
                                         </li>
                                         <li>
                                             <Link href="/leave-applications/setup">Add New</Link>
@@ -929,7 +929,7 @@ const Sidebar = () => {
                                 <AnimateHeight duration={300} height={currentMenu === 'users' ? 'auto' : 0}>
                                     <ul className="sub-menu text-gray-500">
                                         <li>
-                                            <Link href="/users/list">Users</Link>
+                                            <Link href="/users">Users</Link>
                                         </li>
                                         <li>
                                             <Link href="/users/setup">Add New</Link>

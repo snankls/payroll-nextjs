@@ -30,24 +30,6 @@ export default function UserSetup() {
         { value: 'karachi', label: 'Karachi' },
     ];
 
-    // gender
-    const gender = [
-        { value: 'male', label: 'Male' },
-        { value: 'female', label: 'Female' },
-    ];
-
-    // job type
-    const job_type = [
-        { value: 'permanent', label: 'Permanent' },
-        { value: 'temporary', label: 'Temporary' },
-    ];
-
-    // bank
-    const bank = [
-        { value: 'ali', label: 'Ali HBL' },
-        { value: 'abrar', label: 'Abrar UBL' },
-    ];
-
     // Status
     const options = [
         { value: 'active', label: 'Active' },
@@ -71,24 +53,16 @@ export default function UserSetup() {
                             <input type="text" className="form-input ltr:rounded-l-none rtl:rounded-r-none" />
                         </div>
                         <div>
-                            <label className="text-white-dark">First Name</label>
+                            <label className="text-white-dark">Employee Name</label>
                             <input type="text" className="form-input ltr:rounded-l-none rtl:rounded-r-none" />
                         </div>
                         <div>
-                            <label className="text-white-dark">Last Name</label>
-                            <input type="text" className="form-input ltr:rounded-l-none rtl:rounded-r-none" />
+                            <label className="text-white-dark">Department Name</label>
+                            <Select defaultValue={department[0]} options={department} isSearchable={false} />
                         </div>
                         <div>
-                            <label className="text-white-dark">Email</label>
-                            <input type="email" className="form-input ltr:rounded-l-none rtl:rounded-r-none" />
-                        </div>
-                        <div>
-                            <label className="text-white-dark">Phone Number</label>
-                            <input type="text" className="form-input ltr:rounded-l-none rtl:rounded-r-none" />
-                        </div>
-                        <div>
-                            <label className="text-white-dark">Gender</label>
-                            <Select defaultValue={gender[0]} options={gender} isSearchable={false} />
+                            <label className="text-white-dark">Designation</label>
+                            <Select defaultValue={designation[0]} options={designation} isSearchable={false} />
                         </div>
                         <div>
                             <label className="text-white-dark">Date of Birth</label>
@@ -109,24 +83,16 @@ export default function UserSetup() {
                             />
                         </div>
                         <div>
-                            <label className="text-white-dark">Select Department</label>
-                            <Select defaultValue={department[0]} options={department} isSearchable={false} />
+                            <label className="text-white-dark">Email</label>
+                            <input type="email" className="form-input ltr:rounded-l-none rtl:rounded-r-none" />
                         </div>
                         <div>
-                            <label className="text-white-dark">Select Designation</label>
-                            <Select defaultValue={designation[0]} options={designation} isSearchable={false} />
-                        </div>
-                        <div>
-                            <label className="text-white-dark">Select Job Type</label>
-                            <Select defaultValue={job_type[0]} options={job_type} isSearchable={false} />
+                            <label className="text-white-dark">Phone Number</label>
+                            <input type="text" className="form-input ltr:rounded-l-none rtl:rounded-r-none" />
                         </div>
                         <div>
                             <label className="text-white-dark">Location</label>
                             <Select defaultValue={location[0]} options={location} isSearchable={false} />
-                        </div>
-                        <div>
-                            <label className="text-white-dark">Select Bank</label>
-                            <Select defaultValue={bank[0]} options={bank} isSearchable={false} />
                         </div>
                         <div>
                             <label className="text-white-dark">Status</label>
@@ -134,17 +100,13 @@ export default function UserSetup() {
                         </div>
                     </fieldset>
 
-                    <fieldset className="grid grid-cols-1 items-end gap-4 md:grid-cols-2 mt-4">
+                    <fieldset className="grid grid-cols-1 items-end gap-4 md:grid-cols-1 mt-4">
                         <div>
                             <label className="text-white-dark">Description</label>
                             <textarea rows={5} className="form-textarea ltr:rounded-l-none rtl:rounded-r-none"></textarea>
                         </div>
                         <div>
-                            <label className="text-white-dark">Address</label>
-                            <textarea rows={5} className="form-textarea ltr:rounded-l-none rtl:rounded-r-none"></textarea>
-                        </div>
-                        <div>
-                            <div className="grid grid-cols-1 gap-6 lg:grid-cols-1">
+                            <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
                                 <div className="custom-file-container" data-upload-id="myFirstImage">
                                     <div className="label-container">
                                         <label className="text-white-dark">Upload </label>
@@ -174,9 +136,6 @@ export default function UserSetup() {
                                 </div>
                             </div>
                         </div>
-                    </fieldset>
-
-                    <fieldset className="grid grid-cols-1 items-end gap-4 md:grid-cols-1 mt-4">
                         <div className='mt-3'>
                             <button type="submit" className="btn btn-primary">Submit</button>
                         </div>

@@ -20,8 +20,10 @@ export default function UserSetup() {
 
     // Status
     const options = [
-        { value: 'active', label: 'Active' },
-        { value: 'inactive', label: 'Inactive' },
+        { value: 'Present', label: 'Present' },
+        { value: 'Absent', label: 'Absent' },
+        { value: 'Half Day', label: 'Half Day' },
+        { value: 'Leave', label: 'Leave' },
     ];
 
     // Upload Image
@@ -42,7 +44,12 @@ export default function UserSetup() {
                         </div>
                         <div>
                             <label className="text-white-dark">Date</label>
-                            <input type="text" className="form-input ltr:rounded-l-none rtl:rounded-r-none" />
+                            <Flatpickr value={date1}
+                                options={{ dateFormat: 'Y-m-d' }}
+                                className="form-input"
+                                placeholder='yyyy-mm-dd'
+                                onChange={(date) => setDate1(date)}
+                            />
                         </div>
                         <div>
                             <label className="text-white-dark">Check In</label>
@@ -79,6 +86,10 @@ export default function UserSetup() {
                     </fieldset>
 
                     <fieldset className="grid grid-cols-1 items-end gap-4 md:grid-cols-1 mt-4">
+                        <div>
+                            <label className="text-white-dark">Notes</label>
+                            <textarea rows={5} className="form-textarea ltr:rounded-l-none rtl:rounded-r-none"></textarea>
+                        </div>
                         <div className='mt-3'>
                             <button type="submit" className="btn btn-primary">Submit</button>
                         </div>

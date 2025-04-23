@@ -332,6 +332,10 @@ export default function Departments() {
                                                 <input type="text" className="form-input ltr:rounded-l-none rtl:rounded-r-none" />
                                             </div>
                                             <div>
+                                                <label className="text-white-dark">Description</label>
+                                                <textarea rows={5} className="form-textarea ltr:rounded-l-none rtl:rounded-r-none"></textarea>
+                                            </div>
+                                            <div>
                                                 <label className="text-white-dark">Status</label>
                                                 <Select defaultValue={options[0]} options={options} isSearchable={false} />
                                             </div>

@@ -241,19 +241,28 @@ export default function Designations() {
                         records={records}
                         columns={[
                             {
-                                accessor: 'designation_id',
+                                accessor: 'bank_name',
                                 sortable: true,
                                 titleClassName: 'text-right',
                                 render: ({ invoice, id }) => <div className="font-semibold">{`${invoice}`}</div>,
                             },
                             {
-                                accessor: 'designation_name',
+                                accessor: 'account_number',
                                 sortable: true,
                                 titleClassName: 'text-right',
                                 render: ({ name, id }) => <div className="font-semibold">{`${name}`}</div>,
                             },
                             {
-                                accessor: 'department_name',
+                                accessor: 'ibank_name',
+                                sortable: true,
+                                render: ({ name, id }) => (
+                                    <div className="items-center font-semibold">
+                                        <div>{name}</div>
+                                    </div>
+                                ),
+                            },
+                            {
+                                accessor: 'swift_code',
                                 sortable: true,
                                 render: ({ name, id }) => (
                                     <div className="items-center font-semibold">
@@ -327,7 +336,7 @@ export default function Designations() {
                         >
                             <DialogPanel as="div" className="panel my-8 w-full max-w-lg overflow-hidden rounded-lg border-0 p-0 text-black dark:text-white-dark">
                                 <div className="flex items-center justify-between bg-[#fbfbfb] px-5 py-3 dark:bg-[#121c2c]">
-                                    <div className="text-lg font-bold">Designation Add/Edit</div>
+                                    <div className="text-lg font-bold">Bank A/C Add/Edit</div>
                                     <button type="button" className="text-white-dark hover:text-dark" onClick={() => setModal1(false)}>
                                         <IconX />
                                     </button>
@@ -336,16 +345,28 @@ export default function Designations() {
                                     <form>
                                         <fieldset className="grid grid-cols-1 items-end gap-4 md:grid-cols-1">
                                             <div>
-                                                <label className="text-white-dark">Designation ID</label>
+                                                <label className="text-white-dark">Account Holder Name</label>
                                                 <input type="text" className="form-input ltr:rounded-l-none rtl:rounded-r-none" />
                                             </div>
                                             <div>
-                                                <label className="text-white-dark">Designation Name</label>
+                                                <label className="text-white-dark">Bank Name</label>
                                                 <input type="text" className="form-input ltr:rounded-l-none rtl:rounded-r-none" />
                                             </div>
                                             <div>
-                                                <label className="text-white-dark">Description</label>
-                                                <textarea rows={5} className="form-textarea ltr:rounded-l-none rtl:rounded-r-none"></textarea>
+                                                <label className="text-white-dark">Branch Name</label>
+                                                <input type="text" className="form-input ltr:rounded-l-none rtl:rounded-r-none" />
+                                            </div>
+                                            <div>
+                                                <label className="text-white-dark">Account Number</label>
+                                                <input type="text" className="form-input ltr:rounded-l-none rtl:rounded-r-none" />
+                                            </div>
+                                            <div>
+                                                <label className="text-white-dark">IBAN Number</label>
+                                                <input type="text" className="form-input ltr:rounded-l-none rtl:rounded-r-none" />
+                                            </div>
+                                            <div>
+                                                <label className="text-white-dark">Swift Code</label>
+                                                <input type="text" className="form-input ltr:rounded-l-none rtl:rounded-r-none" />
                                             </div>
                                             <div>
                                                 <label className="text-white-dark">Status</label>

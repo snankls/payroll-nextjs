@@ -4,10 +4,10 @@ import { useSelector } from 'react-redux';
 import { IRootState } from '@/store';
 import Select from 'react-select';
 import Flatpickr from 'react-flatpickr';
-import 'flatpickr/dist/flatpickr.css';
 import ImageUploading, { ImageListType } from 'react-images-uploading';
+import 'flatpickr/dist/flatpickr.css';
 
-export default function LeaveApplicationsSetup() {
+export default function UserSetup() {
     const isRtl = useSelector((state: IRootState) => state.themeConfig.rtlClass) === 'rtl';
     const [date1, setDate1] = useState<any>('');
 
@@ -17,24 +17,11 @@ export default function LeaveApplicationsSetup() {
         { value: 'ali', label: 'Ali' },
     ];
 
-    // leave type
-    const leaveType = [
-        { value: 'casual', label: 'Casual' },
-        { value: 'sick', label: 'Sick' },
-    ];
-
     // Status
     const options = [
         { value: 'active', label: 'Active' },
         { value: 'inactive', label: 'Inactive' },
     ];
-
-    // Upload Image
-    const [images, setImages] = useState<any>([]);
-    const maxNumber = 69;
-    const onChange = (imageList: ImageListType, addUpdateIndex: number[] | undefined) => {
-        setImages(imageList as never[]);
-    };
 
     return (
         <div className='panel'>
@@ -46,11 +33,15 @@ export default function LeaveApplicationsSetup() {
                             <Select defaultValue={employee[0]} options={employee} isSearchable={false} />
                         </div>
                         <div>
-                            <label className="text-white-dark">Leave Type</label>
-                            <Select defaultValue={leaveType[0]} options={leaveType} isSearchable={false} />
+                            <label className="text-white-dark">Amount</label>
+                            <input type="text" className="form-input ltr:rounded-l-none rtl:rounded-r-none" />
                         </div>
                         <div>
-                            <label className="text-white-dark">Date From</label>
+                            <label className="text-white-dark">Installment Plan <small>in month</small></label>
+                            <input type="text" className="form-input ltr:rounded-l-none rtl:rounded-r-none" />
+                        </div>
+                        <div>
+                            <label className="text-white-dark">Start Date</label>
                             <Flatpickr value={date1}
                                 options={{ dateFormat: 'Y-m-d' }}
                                 className="form-input"
@@ -59,7 +50,7 @@ export default function LeaveApplicationsSetup() {
                             />
                         </div>
                         <div>
-                            <label className="text-white-dark">Date To</label>
+                            <label className="text-white-dark">End Date</label>
                             <Flatpickr value={date1}
                                 options={{ dateFormat: 'Y-m-d' }}
                                 className="form-input"
@@ -75,7 +66,7 @@ export default function LeaveApplicationsSetup() {
 
                     <fieldset className="grid grid-cols-1 items-end gap-4 md:grid-cols-1 mt-4">
                         <div>
-                            <label className="text-white-dark">Reason</label>
+                            <label className="text-white-dark">Description</label>
                             <textarea rows={5} className="form-textarea ltr:rounded-l-none rtl:rounded-r-none"></textarea>
                         </div>
                         <div className='mt-3'>

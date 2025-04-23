@@ -18,16 +18,16 @@ import IconMenuUsers from '@/components/icon/menu/icon-menu-users';
 // import IconMenuMailbox from '@/components/icon/menu/icon-menu-mailbox';
 // import IconMenuTodo from '@/components/icon/menu/icon-menu-todo';
 // import IconMenuNotes from '@/components/icon/menu/icon-menu-notes';
-// import IconMenuScrumboard from '@/components/icon/menu/icon-menu-scrumboard';
+import IconMenuScrumboard from '@/components/icon/menu/icon-menu-scrumboard';
 import IconMenuContacts from '@/components/icon/menu/icon-menu-contacts';
-// import IconMenuInvoice from '@/components/icon/menu/icon-menu-invoice';
-// import IconMenuComponents from '@/components/icon/menu/icon-menu-components';
-// import IconMenuElements from '@/components/icon/menu/icon-menu-elements';
+import IconMenuInvoice from '@/components/icon/menu/icon-menu-invoice';
+import IconMenuComponents from '@/components/icon/menu/icon-menu-components';
+import IconMenuElements from '@/components/icon/menu/icon-menu-elements';
 // import IconMenuCharts from '@/components/icon/menu/icon-menu-charts';
 // import IconMenuFontIcons from '@/components/icon/menu/icon-menu-font-icons';
 // import IconMenuDragAndDrop from '@/components/icon/menu/icon-menu-drag-and-drop';
-// import IconMenuTables from '@/components/icon/menu/icon-menu-tables';
-// import IconMenuDatatables from '@/components/icon/menu/icon-menu-datatables';
+import IconMenuTables from '@/components/icon/menu/icon-menu-tables';
+import IconMenuDatatables from '@/components/icon/menu/icon-menu-datatables';
 // import IconMenuPages from '@/components/icon/menu/icon-menu-pages';
 // import IconMenuAuthentication from '@/components/icon/menu/icon-menu-authentication';
 // import IconMenuDocumentation from '@/components/icon/menu/icon-menu-documentation';
@@ -740,7 +740,7 @@ const Sidebar = () => {
                             <li className="menu nav-item">
                                 <button type="button" className={`${currentMenu === 'organization' ? 'active' : ''} nav-link group w-full`} onClick={() => toggleMenu('organization')}>
                                     <div className="flex items-center">
-                                        <IconMenuUsers className="shrink-0 group-hover:!text-primary" />
+                                        <IconMenuScrumboard className="shrink-0 group-hover:!text-primary" />
                                         <span className="text-black ltr:pl-3 rtl:pr-3 dark:text-[#506690] dark:group-hover:text-white-dark">Organizations</span>
                                     </div>
 
@@ -756,6 +756,9 @@ const Sidebar = () => {
                                         </li>
                                         <li>
                                             <Link href="/organizations/designations">Designations</Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/organizations/job-types">Job Types</Link>
                                         </li>
                                     </ul>
                                 </AnimateHeight>
@@ -780,6 +783,57 @@ const Sidebar = () => {
                                         </li>
                                         <li>
                                             <Link href="/attendances/setup">Add New</Link>
+                                        </li>
+                                    </ul>
+                                </AnimateHeight>
+                            </li>
+
+                            <li className="menu nav-item">
+                                <button type="button" className={`${currentMenu === 'allownace' ? 'active' : ''} nav-link group w-full`} onClick={() => toggleMenu('allownace')}>
+                                    <div className="flex items-center">
+                                        <IconMenuComponents className="shrink-0 group-hover:!text-primary" />
+                                        <span className="text-black ltr:pl-3 rtl:pr-3 dark:text-[#506690] dark:group-hover:text-white-dark">Allownaces</span>
+                                    </div>
+
+                                    <div className={currentMenu !== 'allownace' ? '-rotate-90 rtl:rotate-90' : ''}>
+                                        <IconCaretDown />
+                                    </div>
+                                </button>
+
+                                <AnimateHeight duration={300} height={currentMenu === 'allownace' ? 'auto' : 0}>
+                                    <ul className="sub-menu text-gray-500">
+                                        <li>
+                                            <Link href="/allownaces/list">Allownaces</Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/allownaces/setup">Add New</Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/allownaces/allownace-types">Allowances Types</Link>
+                                        </li>
+                                    </ul>
+                                </AnimateHeight>
+                            </li>
+                            
+                            <li className="menu nav-item">
+                                <button type="button" className={`${currentMenu === 'loan' ? 'active' : ''} nav-link group w-full`} onClick={() => toggleMenu('loan')}>
+                                    <div className="flex items-center">
+                                        <IconMenuDatatables className="shrink-0 group-hover:!text-primary" />
+                                        <span className="text-black ltr:pl-3 rtl:pr-3 dark:text-[#506690] dark:group-hover:text-white-dark">Loans</span>
+                                    </div>
+
+                                    <div className={currentMenu !== 'loan' ? '-rotate-90 rtl:rotate-90' : ''}>
+                                        <IconCaretDown />
+                                    </div>
+                                </button>
+
+                                <AnimateHeight duration={300} height={currentMenu === 'loan' ? 'auto' : 0}>
+                                    <ul className="sub-menu text-gray-500">
+                                        <li>
+                                            <Link href="/loans/list">Loans</Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/loans/setup">Add New</Link>
                                         </li>
                                     </ul>
                                 </AnimateHeight>
@@ -813,12 +867,51 @@ const Sidebar = () => {
                             </li>
 
                             <li className="menu nav-item">
+                                <Link href="/banks" className="group">
+                                    <div className="flex items-center">
+                                        <IconMenuInvoice className="shrink-0 group-hover:!text-primary" />
+                                        <span className="text-black ltr:pl-3 rtl:pr-3 dark:text-[#506690] dark:group-hover:text-white-dark">Bank A/C</span>
+                                    </div>
+                                </Link>
+                            </li>
+
+                            <li className="menu nav-item">
                                 <Link href="/locations" className="group">
                                     <div className="flex items-center">
                                         <IconMenuContacts className="shrink-0 group-hover:!text-primary" />
                                         <span className="text-black ltr:pl-3 rtl:pr-3 dark:text-[#506690] dark:group-hover:text-white-dark">Locations</span>
                                     </div>
                                 </Link>
+                            </li>
+                            
+                            <li className="menu nav-item">
+                                <button type="button" className={`${currentMenu === 'report' ? 'active' : ''} nav-link group w-full`} onClick={() => toggleMenu('report')}>
+                                    <div className="flex items-center">
+                                        <IconMenuTables className="shrink-0 group-hover:!text-primary" />
+                                        <span className="text-black ltr:pl-3 rtl:pr-3 dark:text-[#506690] dark:group-hover:text-white-dark">Reports</span>
+                                    </div>
+
+                                    <div className={currentMenu !== 'report' ? '-rotate-90 rtl:rotate-90' : ''}>
+                                        <IconCaretDown />
+                                    </div>
+                                </button>
+
+                                <AnimateHeight duration={300} height={currentMenu === 'report' ? 'auto' : 0}>
+                                    <ul className="sub-menu text-gray-500">
+                                        <li>
+                                            <Link href="/reports/employee">Employees</Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/reports/benefits">Benefits</Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/reports/loans">Loans</Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/reports/salary-wages">Salary Wages</Link>
+                                        </li>
+                                    </ul>
+                                </AnimateHeight>
                             </li>
                             
                             <li className="menu nav-item">

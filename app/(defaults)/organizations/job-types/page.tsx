@@ -327,7 +327,7 @@ export default function Designations() {
                         >
                             <DialogPanel as="div" className="panel my-8 w-full max-w-lg overflow-hidden rounded-lg border-0 p-0 text-black dark:text-white-dark">
                                 <div className="flex items-center justify-between bg-[#fbfbfb] px-5 py-3 dark:bg-[#121c2c]">
-                                    <div className="text-lg font-bold">Designation Add/Edit</div>
+                                    <div className="text-lg font-bold">Job Type Add/Edit</div>
                                     <button type="button" className="text-white-dark hover:text-dark" onClick={() => setModal1(false)}>
                                         <IconX />
                                     </button>
@@ -336,16 +336,8 @@ export default function Designations() {
                                     <form>
                                         <fieldset className="grid grid-cols-1 items-end gap-4 md:grid-cols-1">
                                             <div>
-                                                <label className="text-white-dark">Designation ID</label>
+                                                <label className="text-white-dark">Name</label>
                                                 <input type="text" className="form-input ltr:rounded-l-none rtl:rounded-r-none" />
-                                            </div>
-                                            <div>
-                                                <label className="text-white-dark">Designation Name</label>
-                                                <input type="text" className="form-input ltr:rounded-l-none rtl:rounded-r-none" />
-                                            </div>
-                                            <div>
-                                                <label className="text-white-dark">Description</label>
-                                                <textarea rows={5} className="form-textarea ltr:rounded-l-none rtl:rounded-r-none"></textarea>
                                             </div>
                                             <div>
                                                 <label className="text-white-dark">Status</label>

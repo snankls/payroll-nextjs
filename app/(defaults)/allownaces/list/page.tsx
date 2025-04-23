@@ -1,16 +1,14 @@
 'use client';
-import React, { Fragment, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { sortBy } from 'lodash';
 import IconTrashLines from '@/components/icon/icon-trash-lines';
 import IconEdit from '@/components/icon/icon-edit';
 import IconEye from '@/components/icon/icon-eye';
+import IconPlus from '@/components/icon/icon-plus';
 import { DataTableSortStatus, DataTable } from 'mantine-datatable';
 import Link from 'next/link';
-import { Transition, Dialog, DialogPanel, TransitionChild } from '@headlessui/react';
-import IconX from '@/components/icon/icon-x';
-import Select from 'react-select';
 
-export default function Designations() {
+export default function UserList() {
     const [items, setItems] = useState([
         {
             id: 1,
@@ -134,8 +132,6 @@ export default function Designations() {
         },
     ]);
 
-    const [modal1, setModal1] = useState(false);
-
     const [page, setPage] = useState(1);
     const PAGE_SIZES = [10, 20, 30, 50, 100];
     const [pageSize, setPageSize] = useState(PAGE_SIZES[0]);
@@ -148,18 +144,6 @@ export default function Designations() {
         columnAccessor: 'firstName',
         direction: 'asc',
     });
-
-     // Departments
-     const department = [
-        { value: 'accountant', label: 'Accountant' },
-        { value: 'engineer', label: 'Engineer' },
-    ];
-
-     // Status
-     const options = [
-        { value: 'active', label: 'Active' },
-        { value: 'inactive', label: 'Inactive' },
-    ];
 
     useEffect(() => {
         setPage(1);
@@ -217,7 +201,6 @@ export default function Designations() {
     };
 
     return (
-        <>
         <div className="panel border-white-light px-0 dark:border-[#1b2e4b]">
             <div className="invoice-table">
                 <div className="mb-4.5 flex flex-col gap-5 px-5 md:flex-row md:items-center">
@@ -226,9 +209,10 @@ export default function Designations() {
                             <IconTrashLines />
                             Delete
                         </button>
-                        <button type="button" className="btn btn-primary" onClick={() => setModal1(true)}>
+                        <Link href="/employees/setup" className="btn btn-primary gap-2">
+                            <IconPlus />
                             Add New
-                        </button>
+                        </Link>
                     </div>
                     <div className="ltr:ml-auto rtl:mr-auto">
                         <input type="text" className="form-input w-auto" placeholder="Search..." value={search} onChange={(e) => setSearch(e.target.value)} />
@@ -241,25 +225,36 @@ export default function Designations() {
                         records={records}
                         columns={[
                             {
-                                accessor: 'designation_id',
+                                accessor: 'invoice',
                                 sortable: true,
-                                titleClassName: 'text-right',
-                                render: ({ invoice, id }) => <div className="font-semibold">{`${invoice}`}</div>,
+                                render: ({ invoice }) => (
+                                    <Link href="/apps/invoice/preview">
+                                        <div className="font-semibold text-primary underline hover:no-underline">{`#${invoice}`}</div>
+                                    </Link>
+                                ),
                             },
                             {
-                                accessor: 'designation_name',
-                                sortable: true,
-                                titleClassName: 'text-right',
-                                render: ({ name, id }) => <div className="font-semibold">{`${name}`}</div>,
-                            },
-                            {
-                                accessor: 'department_name',
+                                accessor: 'name',
                                 sortable: true,
                                 render: ({ name, id }) => (
-                                    <div className="items-center font-semibold">
+                                    <div className="flex items-center font-semibold">
                                         <div>{name}</div>
                                     </div>
                                 ),
+                            },
+                            {
+                                accessor: 'email',
+                                sortable: true,
+                            },
+                            {
+                                accessor: 'date',
+                                sortable: true,
+                            },
+                            {
+                                accessor: 'amount',
+                                sortable: true,
+                                titleClassName: 'text-right',
+                                render: ({ amount, id }) => <div className="text-right font-semibold">{`$${amount}`}</div>,
                             },
                             {
                                 accessor: 'status',
@@ -273,9 +268,12 @@ export default function Designations() {
                                 textAlignment: 'center',
                                 render: ({ id }) => (
                                     <div className="mx-auto flex w-max items-center gap-4">
-                                        <button type="button" className="flex hover:text-info" onClick={() => setModal1(true)}>
+                                        <Link href="/users/setup" className="flex hover:text-info">
                                             <IconEdit className="h-4.5 w-4.5" />
-                                        </button>
+                                        </Link>
+                                        <Link href="/users/profile" className="flex hover:text-primary">
+                                            <IconEye />
+                                        </Link>
                                         <button type="button" className="flex hover:text-danger" onClick={(e) => deleteRow(id)}>
                                             <IconTrashLines />
                                         </button>
@@ -299,73 +297,5 @@ export default function Designations() {
                 </div>
             </div>
         </div>
-        
-        {/* Modal */}
-        <Transition appear show={modal1} as={Fragment}>
-            <Dialog as="div" open={modal1} onClose={() => setModal1(false)}>
-                <TransitionChild
-                    as={Fragment}
-                    enter="ease-out duration-300"
-                    enterFrom="opacity-0"
-                    enterTo="opacity-100"
-                    leave="ease-in duration-200"
-                    leaveFrom="opacity-100"
-                    leaveTo="opacity-0"
-                >
-                    <div className="fixed inset-0" />
-                </TransitionChild>
-                <div className="fixed inset-0 z-[999] overflow-y-auto bg-[black]/60">
-                    <div className="flex min-h-screen items-start justify-center px-4">
-                        <TransitionChild
-                            as={Fragment}
-                            enter="ease-out duration-300"
-                            enterFrom="opacity-0 scale-95"
-                            enterTo="opacity-100 scale-100"
-                            leave="ease-in duration-200"
-                            leaveFrom="opacity-100 scale-100"
-                            leaveTo="opacity-0 scale-95"
-                        >
-                            <DialogPanel as="div" className="panel my-8 w-full max-w-lg overflow-hidden rounded-lg border-0 p-0 text-black dark:text-white-dark">
-                                <div className="flex items-center justify-between bg-[#fbfbfb] px-5 py-3 dark:bg-[#121c2c]">
-                                    <div className="text-lg font-bold">Designation Add/Edit</div>
-                                    <button type="button" className="text-white-dark hover:text-dark" onClick={() => setModal1(false)}>
-                                        <IconX />
-                                    </button>
-                                </div>
-                                <div className="p-5">
-                                    <form>
-                                        <fieldset className="grid grid-cols-1 items-end gap-4 md:grid-cols-1">
-                                            <div>
-                                                <label className="text-white-dark">Designation ID</label>
-                                                <input type="text" className="form-input ltr:rounded-l-none rtl:rounded-r-none" />
-                                            </div>
-                                            <div>
-                                                <label className="text-white-dark">Designation Name</label>
-                                                <input type="text" className="form-input ltr:rounded-l-none rtl:rounded-r-none" />
-                                            </div>
-                                            <div>
-                                                <label className="text-white-dark">Description</label>
-                                                <textarea rows={5} className="form-textarea ltr:rounded-l-none rtl:rounded-r-none"></textarea>
-                                            </div>
-                                            <div>
-                                                <label className="text-white-dark">Status</label>
-                                                <Select defaultValue={options[0]} options={options} isSearchable={false} />
-                                            </div>
-                                        </fieldset>
-
-                                        <fieldset className="grid grid-cols-1 items-end gap-4 md:grid-cols-1 mt-4">
-                                            <div className='mt-3'>
-                                                <button type="submit" className="btn btn-primary">Submit</button>
-                                            </div>
-                                        </fieldset>
-                                    </form>
-                                </div>
-                            </DialogPanel>
-                        </TransitionChild>
-                    </div>
-                </div>
-            </Dialog>
-        </Transition>
-        </>
     );
 };

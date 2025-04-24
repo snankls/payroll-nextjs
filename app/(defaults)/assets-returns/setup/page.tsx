@@ -99,9 +99,7 @@ export default function UserSetup() {
                                 <thead>
                                     <tr>
                                         <th>Items</th>
-                                        <th className="w-1">Quantity</th>
-                                        <th className="w-1">Price</th>
-                                        <th>Total</th>
+                                        <th>Description</th>
                                         <th className="w-1"></th>
                                     </tr>
                                 </thead>
@@ -118,16 +116,9 @@ export default function UserSetup() {
                                             <tr className="align-top" key={item.id}>
                                                 <td>
                                                     <Select defaultValue={allowance_item[0]} options={allowance_item} isSearchable={false} />
-                                                    <textarea className="form-textarea mt-4" placeholder="Item Description" defaultValue={item.description}></textarea>
                                                 </td>
                                                 <td>
-                                                    <input type="text" className="form-input min-w-[200px]" defaultValue={item.title} />
-                                                </td>
-                                                <td>
-                                                    <input type="text" className="form-input min-w-[200px]" defaultValue={item.title} />
-                                                </td>
-                                                <td>
-                                                    <input type="text" className="form-input min-w-[200px]" defaultValue={item.title} />
+                                                    <textarea className="form-textarea" defaultValue={item.description}></textarea>
                                                 </td>
                                                 <td>
                                                     <button type="button" onClick={() => removeItem(item)}>

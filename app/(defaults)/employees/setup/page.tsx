@@ -109,6 +109,15 @@ export default function UserSetup() {
                             />
                         </div>
                         <div>
+                            <label className="text-white-dark">Resign Date</label>
+                            <Flatpickr value={date1}
+                                options={{ dateFormat: 'Y-m-d' }}
+                                className="form-input"
+                                placeholder='yyyy-mm-dd'
+                                onChange={(date) => setDate1(date)}
+                            />
+                        </div>
+                        <div>
                             <label className="text-white-dark">Select Department</label>
                             <Select defaultValue={department[0]} options={department} isSearchable={false} />
                         </div>
@@ -131,6 +140,25 @@ export default function UserSetup() {
                         <div>
                             <label className="text-white-dark">Status</label>
                             <Select defaultValue={options[0]} options={options} isSearchable={false} />
+                        </div>
+                    </fieldset>
+
+                    <fieldset className="grid grid-cols-1 items-end gap-4 md:grid-cols-4 mt-4">
+                        <div>
+                            <label className="text-white-dark">Basic Salary</label>
+                            <input type="text" className="form-input ltr:rounded-l-none rtl:rounded-r-none" />
+                        </div>
+                        <div>
+                            <label className="text-white-dark">House Rent</label>
+                            <input type="text" className="form-input ltr:rounded-l-none rtl:rounded-r-none" />
+                        </div>
+                        <div>
+                            <label className="text-white-dark">Medical Allowances</label>
+                            <input type="text" className="form-input ltr:rounded-l-none rtl:rounded-r-none" />
+                        </div>
+                        <div>
+                            <label className="text-white-dark">Total Salary</label>
+                            <input type="text" className="form-input ltr:rounded-l-none rtl:rounded-r-none" />
                         </div>
                     </fieldset>
 

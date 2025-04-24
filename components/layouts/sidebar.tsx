@@ -814,6 +814,30 @@ const Sidebar = () => {
                                     </ul>
                                 </AnimateHeight>
                             </li>
+
+                            <li className="menu nav-item">
+                                <button type="button" className={`${currentMenu === 'allownace-return' ? 'active' : ''} nav-link group w-full`} onClick={() => toggleMenu('allownace-return')}>
+                                    <div className="flex items-center">
+                                        <IconMenuElements className="shrink-0 group-hover:!text-primary" />
+                                        <span className="text-black ltr:pl-3 rtl:pr-3 dark:text-[#506690] dark:group-hover:text-white-dark">Allownace Returns</span>
+                                    </div>
+
+                                    <div className={currentMenu !== 'allownace-return' ? '-rotate-90 rtl:rotate-90' : ''}>
+                                        <IconCaretDown />
+                                    </div>
+                                </button>
+
+                                <AnimateHeight duration={300} height={currentMenu === 'allownace-return' ? 'auto' : 0}>
+                                    <ul className="sub-menu text-gray-500">
+                                        <li>
+                                            <Link href="/allowance-returns">Allownace Returns</Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/allowance-returns/setup">Add New</Link>
+                                        </li>
+                                    </ul>
+                                </AnimateHeight>
+                            </li>
                             
                             <li className="menu nav-item">
                                 <button type="button" className={`${currentMenu === 'loan' ? 'active' : ''} nav-link group w-full`} onClick={() => toggleMenu('loan')}>

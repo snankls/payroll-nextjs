@@ -91,7 +91,7 @@ const Sidebar = () => {
                     <div className="flex items-center justify-between px-4 py-3">
                         <Link href="/" className="main-logo flex shrink-0 items-center">
                             <img className="ml-[5px] w-8 flex-none" src="/assets/images/logo.svg" alt="logo" />
-                            <span className="align-middle text-2xl font-semibold ltr:ml-1.5 rtl:mr-1.5 dark:text-white-light lg:inline">VRISTO</span>
+                            <span className="align-middle text-2xl font-semibold ltr:ml-1.5 rtl:mr-1.5 dark:text-white-light lg:inline">PAYROLL</span>
                         </Link>
 
                         <button
@@ -792,7 +792,7 @@ const Sidebar = () => {
                                 <button type="button" className={`${currentMenu === 'allownace' ? 'active' : ''} nav-link group w-full`} onClick={() => toggleMenu('allownace')}>
                                     <div className="flex items-center">
                                         <IconMenuComponents className="shrink-0 group-hover:!text-primary" />
-                                        <span className="text-black ltr:pl-3 rtl:pr-3 dark:text-[#506690] dark:group-hover:text-white-dark">Allownaces</span>
+                                        <span className="text-black ltr:pl-3 rtl:pr-3 dark:text-[#506690] dark:group-hover:text-white-dark">Company Assets</span>
                                     </div>
 
                                     <div className={currentMenu !== 'allownace' ? '-rotate-90 rtl:rotate-90' : ''}>
@@ -803,13 +803,13 @@ const Sidebar = () => {
                                 <AnimateHeight duration={300} height={currentMenu === 'allownace' ? 'auto' : 0}>
                                     <ul className="sub-menu text-gray-500">
                                         <li>
-                                            <Link href="/allownaces">Allownaces</Link>
+                                            <Link href="/company-assets">Company Assets</Link>
                                         </li>
                                         <li>
-                                            <Link href="/allownaces/setup">Add New</Link>
+                                            <Link href="/company-assets/setup">Add New</Link>
                                         </li>
                                         <li>
-                                            <Link href="/allownaces/allownace-types">Allowances Types</Link>
+                                            <Link href="/company-assets/assets-types">Assets Types</Link>
                                         </li>
                                     </ul>
                                 </AnimateHeight>
@@ -819,7 +819,7 @@ const Sidebar = () => {
                                 <button type="button" className={`${currentMenu === 'allownace-return' ? 'active' : ''} nav-link group w-full`} onClick={() => toggleMenu('allownace-return')}>
                                     <div className="flex items-center">
                                         <IconMenuElements className="shrink-0 group-hover:!text-primary" />
-                                        <span className="text-black ltr:pl-3 rtl:pr-3 dark:text-[#506690] dark:group-hover:text-white-dark">Allownace Returns</span>
+                                        <span className="text-black ltr:pl-3 rtl:pr-3 dark:text-[#506690] dark:group-hover:text-white-dark">Assets Returns</span>
                                     </div>
 
                                     <div className={currentMenu !== 'allownace-return' ? '-rotate-90 rtl:rotate-90' : ''}>
@@ -830,10 +830,10 @@ const Sidebar = () => {
                                 <AnimateHeight duration={300} height={currentMenu === 'allownace-return' ? 'auto' : 0}>
                                     <ul className="sub-menu text-gray-500">
                                         <li>
-                                            <Link href="/allowance-returns">Allownace Returns</Link>
+                                            <Link href="/assets-returns">Assets Returns</Link>
                                         </li>
                                         <li>
-                                            <Link href="/allowance-returns/setup">Add New</Link>
+                                            <Link href="/assets-returns/setup">Add New</Link>
                                         </li>
                                     </ul>
                                 </AnimateHeight>

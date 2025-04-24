@@ -829,7 +829,7 @@ const ComponentsAppsMailbox = () => {
 
     const defaultParams = {
         id: null,
-        from: 'vristo@mail.com',
+        from: 'payroll@mail.com',
         to: '',
         cc: '',
         title: '',
@@ -1869,13 +1869,13 @@ const ComponentsAppsMailbox = () => {
                                                         <li>
                                                             <div className="flex items-center px-4 py-2">
                                                                 <div className="w-1/4 text-white-dark ltr:mr-2 rtl:ml-2">From:</div>
-                                                                <div className="flex-1 truncate">{selectedMail.type === 'sent_mail' ? 'vristo@gmail.com' : selectedMail.email}</div>
+                                                                <div className="flex-1 truncate">{selectedMail.type === 'sent_mail' ? 'payroll@gmail.com' : selectedMail.email}</div>
                                                             </div>
                                                         </li>
                                                         <li>
                                                             <div className="flex items-center px-4 py-2">
                                                                 <div className="w-1/4 text-white-dark ltr:mr-2 rtl:ml-2">To:</div>
-                                                                <div className="flex-1 truncate">{selectedMail.type !== 'sent_mail' ? 'vristo@gmail.com' : selectedMail.email}</div>
+                                                                <div className="flex-1 truncate">{selectedMail.type !== 'sent_mail' ? 'payroll@gmail.com' : selectedMail.email}</div>
                                                             </div>
                                                         </li>
                                                         <li>

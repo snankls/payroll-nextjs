@@ -138,13 +138,6 @@ export default function UserSetup() {
                             <Select defaultValue={bank[0]} options={bank} isSearchable={false} />
                         </div>
                         <div>
-                            <label className="text-white-dark">Status</label>
-                            <Select defaultValue={options[0]} options={options} isSearchable={false} />
-                        </div>
-                    </fieldset>
-
-                    <fieldset className="grid grid-cols-1 items-end gap-4 md:grid-cols-4 mt-4">
-                        <div>
                             <label className="text-white-dark">Basic Salary</label>
                             <input type="text" className="form-input ltr:rounded-l-none rtl:rounded-r-none" />
                         </div>
@@ -157,8 +150,16 @@ export default function UserSetup() {
                             <input type="text" className="form-input ltr:rounded-l-none rtl:rounded-r-none" />
                         </div>
                         <div>
+                            <label className="text-white-dark">Petrol Allowances</label>
+                            <input type="text" className="form-input ltr:rounded-l-none rtl:rounded-r-none" />
+                        </div>
+                        <div>
                             <label className="text-white-dark">Total Salary</label>
                             <input type="text" className="form-input ltr:rounded-l-none rtl:rounded-r-none" />
+                        </div>
+                        <div>
+                            <label className="text-white-dark">Status</label>
+                            <Select defaultValue={options[0]} options={options} isSearchable={false} />
                         </div>
                     </fieldset>
 

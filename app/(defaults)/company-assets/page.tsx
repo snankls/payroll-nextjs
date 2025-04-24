@@ -209,7 +209,7 @@ export default function UserList() {
                             <IconTrashLines />
                             Delete
                         </button>
-                        <Link href="/allowance-returns/setup" className="btn btn-primary gap-2">
+                        <Link href="/company-assets/setup" className="btn btn-primary gap-2">
                             <IconPlus />
                             Add New
                         </Link>
@@ -238,9 +238,6 @@ export default function UserList() {
                                 sortable: true,
                                 render: ({ name, id }) => (
                                     <div className="flex items-center font-semibold">
-                                        <div className="w-max rounded-full bg-white-dark/30 p-0.5 ltr:mr-2 rtl:ml-2">
-                                            <img className="h-8 w-8 rounded-full object-cover" src={`/assets/images/profile-${id}.jpeg`} alt="" />
-                                        </div>
                                         <div>{name}</div>
                                     </div>
                                 ),

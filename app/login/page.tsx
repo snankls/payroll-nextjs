@@ -1,14 +1,18 @@
-import ComponentsAuthUnlockForm from '@/components/auth/components-auth-unlock-form';
+import ComponentsAuthLoginForm from '@/components/auth/components-auth-login-form';
+import IconFacebookCircle from '@/components/icon/icon-facebook-circle';
+import IconGoogle from '@/components/icon/icon-google';
+import IconInstagram from '@/components/icon/icon-instagram';
+import IconTwitter from '@/components/icon/icon-twitter';
 import LanguageDropdown from '@/components/language-dropdown';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import React from 'react';
 
 export const metadata: Metadata = {
-    title: 'Unlock Cover',
+    title: 'Login Cover',
 };
 
-const CoverLockScreen = () => {
+const CoverLogin = () => {
     return (
         <div>
             <div className="absolute inset-0">
@@ -27,7 +31,7 @@ const CoverLockScreen = () => {
                                 <img src="/assets/images/auth/logo-white.svg" alt="Logo" className="w-full" />
                             </Link>
                             <div className="mt-24 hidden w-full max-w-[430px] lg:block">
-                                <img src="/assets/images/auth/unlock.svg" alt="Cover Image" className="w-full" />
+                                <img src="/assets/images/auth/login.svg" alt="Cover Image" className="w-full" />
                             </div>
                         </div>
                     </div>
@@ -36,19 +40,13 @@ const CoverLockScreen = () => {
                             <Link href="/" className="block w-8 lg:hidden">
                                 <img src="/assets/images/logo.svg" alt="Logo" className="mx-auto w-10" />
                             </Link>
-                            <LanguageDropdown className="ms-auto w-max" />
                         </div>
                         <div className="w-full max-w-[440px] lg:mt-16">
-                            <div className="mb-10 flex items-center">
-                                <div className="flex h-16 w-16 items-end justify-center overflow-hidden rounded-full bg-[#00AB55] ltr:mr-4 rtl:ml-4">
-                                    <img src="/assets/images/auth/user.png" className="w-full object-cover" alt="images" />
-                                </div>
-                                <div className="flex-1">
-                                    <h4 className="text-2xl dark:text-white">Shaun Park</h4>
-                                    <p className="text-white-dark">Enter your password to unlock your ID</p>
-                                </div>
+                            <div className="mb-10">
+                                <h1 className="text-3xl font-extrabold uppercase !leading-snug text-primary md:text-4xl">Sign in</h1>
+                                <p className="text-base font-bold leading-normal text-white-dark">Enter your email and password to login</p>
                             </div>
-                            <ComponentsAuthUnlockForm />
+                            <ComponentsAuthLoginForm />
                         </div>
                         <p className="absolute bottom-6 w-full text-center dark:text-white">© {new Date().getFullYear()}.PAYROLL All Rights Reserved.</p>
                     </div>
@@ -58,4 +56,4 @@ const CoverLockScreen = () => {
     );
 };
 
-export default CoverLockScreen;
+export default CoverLogin;
